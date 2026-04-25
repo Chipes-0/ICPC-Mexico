@@ -6,6 +6,9 @@ on:
       - '**.cpp'
       - 'readme_parser.py'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
