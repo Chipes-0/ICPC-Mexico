@@ -1,4 +1,34 @@
-// https://codeforces.com/gym/106495/problem/J
+/*
+PROBLEM: https://codeforces.com/gym/106495/problem/J
+TIME_COMPLEXITY: O(N)
+SPACE_COMPLEXITY: O(1)
+
+INPUT:
+Test case 1:
+3
+3
+4
+7
+
+OUTPUT:
+3
+
+Test case 2:
+2
+100
+1000
+
+OUTPUT:
+80850
+83083500
+
+test case 3:
+1
+3
+
+OUTPUT:
+1
+*/
 
 #include <bits/stdc++.h>
 

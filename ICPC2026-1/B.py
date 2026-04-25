@@ -1,4 +1,23 @@
-## https://codeforces.com/gym/106495/problem/B
+"""
+PROBLEM: https://codeforces.com/gym/106495/problem/B
+TIME_COMPLEXITY: O(N * L)
+SPACE_COMPLEXITY: O(L)
+
+INPUT:
+Test case 1:
+4
+This example shows a value
+Of 1000000000 without being compressed to 10^{9}
+Which is annoying when read. $ S_{10} = 2^{100000} + 780000 $
+My ID is RA180000 but that was back in the year 20000
+
+
+OUTPUT:
+This example shows a value
+Of 10^{9} without being compressed to 10^{9}
+Which is annoying when read. $ S_{10} = 2^{100000} + 7.8\cdot10^{5} $
+My ID is RA180000 but that was back in the year 2\cdot10^{4}
+"""
 
 n = int(input())
 
