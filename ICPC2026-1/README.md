@@ -23,15 +23,63 @@ NO
 
 
 ## E.cpp
-- 🔗 [Problema](N/A)
-- ⏱ Tiempo: `N/A`
-- 💾 Espacio: `N/A`
+- 🔗 [Problema](https://codeforces.com/gym/106495/problem/E)
+- ⏱ Tiempo: `O(NLogN)`
+- 💾 Espacio: `O(N)`
+
+### 🧪 Test Cases
+
+**Test case 1**
+
+**Input:**
+```text
+10 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+**Output:**
+```text
+1
+2
+4
+8
+6
+10
+3
+9
+5
+7
+```
 
 
 ## G.py
-- 🔗 [Problema](N/A)
-- ⏱ Tiempo: `N/A`
-- 💾 Espacio: `N/A`
+- 🔗 [Problema](https://codeforces.com/gym/106495/problem/G)
+- ⏱ Tiempo: `O(N)`
+- 💾 Espacio: `O(N)`
+
+### 🧪 Test Cases
+
+**Test case 1**
+
+**Input:**
+```text
+5
+1 2 3 4 5
+```
+
+**Output:**
+```text
+0
+```
 
 
 ## J.cpp
@@ -58,9 +106,9 @@ NO
 
 
 ## I.cpp
-- 🔗 [Problema](N/A)
-- ⏱ Tiempo: `N/A`
-- 💾 Espacio: `N/A`
+- 🔗 [Problema](https://codeforces.com/gym/106495/problem/I)
+- ⏱ Tiempo: `O(N)`
+- 💾 Espacio: `O(N)`
 
 
 ## B.py
