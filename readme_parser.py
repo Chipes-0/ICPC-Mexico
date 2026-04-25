@@ -1,20 +1,59 @@
 import os
 import re
 
-ROOT = "."  # raíz del repo
+ROOT = "."
+
+import re
+
+def parse_test_cases(content):
+    pattern = r"INPUT:\n([\s\S]*)"
+    match = re.search(pattern, content)
+
+    if not match:
+        return []
+
+    block = match.group(1)
+
+    # Separar por OUTPUT
+    parts = re.split(r"\nOUTPUT:\n", block)
+
+    if len(parts) < 2:
+        return []
+
+    inputs_part = parts[0]
+    outputs_part = parts[1]
+
+    # Separar test cases
+    input_cases = re.split(r"Test case \d+:\n", inputs_part)[1:]
+    output_cases = re.split(r"Test case \d+:\n", outputs_part)
+
+    # Si OUTPUT no tiene "Test case", lo tratamos como secuencial
+    if len(output_cases) == 1:
+        output_cases = re.split(r"\n\n", outputs_part)
+
+    test_cases = []
+
+    for i in range(min(len(input_cases), len(output_cases))):
+        test_cases.append({
+            "input": input_cases[i].strip(),
+            "output": output_cases[i].strip()
+        })
+
+    return test_cases
 
 def parse_solution(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
     def extract(pattern):
-        match = re.search(pattern, content, re.DOTALL)
+        match = re.search(pattern, content)
         return match.group(1).strip() if match else "N/A"
 
     return {
         "problem": extract(r"PROBLEM:\s*(.*)"),
         "time": extract(r"TIME_COMPLEXITY:\s*(.*)"),
-        "space": extract(r"SPACE_COMPLEXITY:\s*(.*)")
+        "space": extract(r"SPACE_COMPLEXITY:\s*(.*)"),
+        "tests": parse_test_cases(content)
     }
 
 def is_contest_folder(name):
