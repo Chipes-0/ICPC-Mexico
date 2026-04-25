@@ -1,4 +1,35 @@
-// https://codeforces.com/gym/106495/problem/I
+/*
+PROBLEM: https://codeforces.com/gym/106495/problem/I
+TIME_COMPLEXITY: O(N)
+SPACE_COMPLEXITY: O(N)
+
+INPUT:
+6
+3 1 4 1 5 9
+<=>><
+
+OUTPUT:
+43
+1 3 3 2 1 2
+
+test case 2:
+2
+2 7
+<
+
+OUTPUT:
+16
+1 2
+
+test case 3:
+8
+8 2 2 8 3 7 4 6
+=<<=>>=
+
+OUTPUT:
+71
+1 1 2 3 3 2 1 1
+*/
 
 #include <bits/stdc++.h>
 

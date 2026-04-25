@@ -1,4 +1,54 @@
-// https://codeforces.com/gym/106495/problem/E
+/*
+PROBLEM: https://codeforces.com/gym/106495/problem/E
+TIME_COMPLEXITY: O(NLogN)
+SPACE_COMPLEXITY: O(N)
+
+INPUT:
+Test case 1:
+10 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+OUTPUT:
+1
+2
+4
+8
+6
+10
+3
+9
+5
+7
+
+Test case 2:
+10 4
+1
+4
+7
+10
+
+OUTPUT:
+1
+8
+3
+7
+
+test case 3:
+5 1
+5
+
+OUTPUT:
+5
+*/
 
 #include <bits/stdc++.h>
 
