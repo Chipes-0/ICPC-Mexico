@@ -5,6 +5,29 @@ ROOT = "."
 
 import re
 
+SUPPORTED_EXTENSIONS = (".cpp", ".py")
+
+def render_tests_md(tests):
+    if not tests:
+        return ""
+
+    md = "### 🧪 Test Cases\n\n"
+
+    for i, t in enumerate(tests, 1):
+        md += f"**Test case {i}**\n\n"
+
+        md += "**Input:**\n"
+        md += "```text\n"
+        md += t["input"] + "\n"
+        md += "```\n\n"
+
+        md += "**Output:**\n"
+        md += "```text\n"
+        md += t["output"] + "\n"
+        md += "```\n\n"
+
+    return md
+
 def parse_test_cases(content):
     pattern = r"INPUT:\n([\s\S]*)"
     match = re.search(pattern, content)
@@ -75,7 +98,7 @@ def generate():
 
         for root, _, files in os.walk(folder_path):
             for file in files:
-                if file.endswith(".cpp"):
+                if file.endswith(SUPPORTED_EXTENSIONS):
                     found = True
                     path = os.path.join(root, file)
                     data = parse_solution(path)
@@ -86,7 +109,8 @@ def generate():
                     readme += f"- 🔗 [Problema]({data['problem']})\n"
                     readme += f"- ⏱ Tiempo: `{data['time']}`\n"
                     readme += f"- 💾 Espacio: `{data['space']}`\n\n"
-
+                    readme += render_tests_md(data["tests"])
+                    readme += "\n"
         if found:
             with open(os.path.join(folder_path, "README.md"), "w", encoding="utf-8") as f:
                 f.write(readme)
@@ -104,7 +128,7 @@ def generate_global():
 
         for root, _, files in os.walk(folder_path):
             for file in files:
-                if file.endswith(".cpp"):
+                if file.endswith(SUPPORTED_EXTENSIONS):
                     path = os.path.join(root, file)
                     data = parse_solution(path)
 
