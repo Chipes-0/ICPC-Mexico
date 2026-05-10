@@ -21,3 +21,7 @@
 - [I.cpp](./ICPC2026-1/I.cpp) → `O(N)`
 - [B.py](./ICPC2026-1/B.py) → `O(N * L)`
 
+## ICPC2025-Final
+
+- [F.cpp](./ICPC2025-Final/F.cpp) → `O(sqrt(N))`
+
