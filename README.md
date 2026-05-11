@@ -24,4 +24,5 @@
 ## ICPC2025-Final
 
 - [F.cpp](./ICPC2025-Final/F.cpp) → `O(sqrt(N))`
+- [K.cpp](./ICPC2025-Final/K.cpp) → `O(N)`
 

@@ -23,3 +23,27 @@
 ```
 
 
+## K.cpp
+- 🔗 [Problema](https://codeforces.com/gym/106178/problem/K)
+- ⏱ Tiempo: `O(N)`
+- 💾 Espacio: `O(N)`
+
+### 🧪 Test Cases
+
+**Test case 1**
+
+**Input:**
+```text
+4 1
+1 -1
+-2 -1
+0 -2
+0 0
+```
+
+**Output:**
+```text
+16
+```
+
+
